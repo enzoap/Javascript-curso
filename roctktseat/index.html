@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript</title>
+</head>
+<body>
+    <input type="text" placeholder="Insira nome aqui" name="user">
+    <button onclick="buscarUser()">Buscar</button>
+    <ul></ul>
+
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--<script src="modulo4.js"></script>-->
+    <script>
+        var inputElemement = document.querySelector('input');
+        var listElement = document.querySelector('ul');
+        
+        function renderRepos(repos){
+            for(repo of repos){
+                var liElement = document.createElement('li');
+                var textElement = document.createTextNode(repo.name)
+                
+                liElement.appendChild(textElement);
+                listElement.appendChild(liElement);
+            }
+        }
+
+        function renderLoading(loading){
+            listElement.innerHTML = "";
+
+            var textElement = document.createTextNode('Carregando...');
+            var loadingElement = document.createElement('li');
+
+            loadingElement.appendChild(textElement);
+            listElement.appendChild(loadingElement);
+        }
+
+        function renderError(loading){
+            listElement.innerHTML = "";
+
+            var textElement = document.createTextNode('Erro');
+            var errorElement = document.createElement('li');
+
+            errorElement.style.color = "#F00";
+
+            error.appendChild(textElement);
+            listElement.appendChild(errorElement);
+        }
+        
+        function buscarUser(){
+            var user = inputElemement.value;
+
+            if (!user) return;
+
+            renderLoading();
+
+            axios.get('https://api.github.com/users/' + user + '/repos')
+            .then(function(response) { 
+                renderRepos(response.data);
+            })
+            .catch(function() {
+                renderError();
+            });
+        }
+    </script>
+</body>
+</html>

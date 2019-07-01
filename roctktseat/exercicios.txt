@@ -1,0 +1,60 @@
+
+       /*  function pares(x,y){
+            while (x<y){
+                var resto = x % 2;
+                if (resto === 0){
+                    console.log(x);
+                }
+                x++;
+            }     
+        }
+
+        pares(32,321); */
+        
+        /* function temHabilidades(skills){
+            if (skills.indexOf("Javascript") !== -1) {
+                return true;
+
+            }
+        }
+
+        var skills = ["Javascript", "ReactJS", "React Native"];
+        console.log(temHabilidades(skills)); */
+
+
+        /* function experiencia(anos){
+            if (anos === 0 || anos === 1){
+                console.log("Iniciante");
+            } else if (anos ===2 || anos ===3){
+                console.log("Intermediario");
+            } else if (anos >= 4 && anos <7){
+                console.log("Avançado");
+            } else {
+                console.log("Jedi  Master");
+            }
+        }
+
+        var anosEstudo = 7;
+        experiencia(anosEstudo);
+ */
+
+       /*  var usuarios = [
+            {
+                nome: "Diego",
+                habilidades: ["Javascript", "ReactJS", "Redux"]
+            },
+            {
+                nome: "Gabriel",
+                habilidades: ["VueJS", "Ruby on Rails", "Elixir"]
+            }
+        ];
+
+        function exibeHabilidades(){
+            for (usuario of usuarios){
+                console.log(
+                    "O " + usuario.nome + " possui as habilidades: " + usuario.habilidades.join(", ")
+                );
+            }
+        }
+
+        exibeHabilidades(usuarios); */ 
