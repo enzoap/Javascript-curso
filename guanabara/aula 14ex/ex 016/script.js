@@ -3,10 +3,8 @@ function contar() {
     var fim = document.querySelector('#fim')
     var passo = document.querySelector('#passo')
     var res = document.querySelector('#res')
-    if (inicio.value.length == 0){
-        res.innerHTML = 'Erro, verifique os dados <br>'
-    } else if (fim.value.length == 0) {
-        res.innerHTML = 'Erro, verifique os dados'
+    if (inicio.value.length == 0 || fim.value.length == 0){
+        res.innerHTML = ' <br> Erro, verifique os dados '
     }else {
         res.innerHTML = 'Contando <br>'
         var i = Number(inicio.value)
