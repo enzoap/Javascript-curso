@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Modelo de Exercício</title>
+    <title>Gerador de Tabuada</title>
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Tabuada</h1>
     </header>
     <section>
         <div>
-            testando
+            <p><label for="num">Número:</label>
+                <input type="number" id="num" name="num">
+                <button onclick="tabuada()">Gerar tabuada</button>
+            </p>
+            <select name="tabuada" id="tab"  size="13">
+                <option value=null id="clear">Digite um numero acima</option>
+            </select>
         </div>
-        <div>
-            olá
-        </div>
-
     </section>
     <footer>
         <p>&copy; Enzo Augusto </p>
