@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modelo de Exercício</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Título</h1>
+    </header>
+    <section>
+        <div>
+            <p><label for="num">Número (entre 1 e 100): </label>
+                <input type="Number" name="num" id="num">
+                <button onclick="adicionar()">Adicionar</button>
+            </p>
+            <p><select name="tabela" id="tab" size="10"></select>
+            </p>
+            <button onclick="finalizar()">Finalizar</button>
+        </div>
+        <div id="res">
+        </div>
+
+    </section>
+    <footer>
+        <p>&copy; Enzo Augusto </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
